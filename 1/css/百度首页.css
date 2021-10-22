@@ -1,0 +1,125 @@
+
+*{margin: 0px;padding: 0px;}
+.header {
+    margin-top:8px;
+    height: 30px;
+}
+
+.top-left-nav a {
+    text-align:left;
+    margin-left: 21px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: black;
+    
+}
+
+.log-in {
+    float:right;
+    margin-right: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; 
+    background-color: rgb(25, 121, 255);   
+    width: 50px;
+    height: 25px;
+    margin-top:-3px;
+    border-radius:8px;
+    border: none;   
+}
+
+.log-in:hover {
+    cursor: pointer;
+    background-color: rgb(27, 82, 235);
+  }
+
+.opintion {
+    float:right;
+    margin-right: 21px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: black;
+}
+
+.baidu {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.baidutu {
+    height: 140px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.serach {
+    margin:0 auto;
+    text-align: center;
+}
+
+.input_search {
+    width:500px;
+	height:30px;
+    float: left 50%;
+    text-indent:4px;
+    border-radius:7px 0px 0px 7px;
+}
+
+.button_ok {
+    width: 100px;
+    height: 36px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background: #3385ff;
+    border:0;
+    outline: medium;
+    border-radius:0px 8px 8px 0px;
+    float: left 50%;
+}
+
+.button_ok:hover {
+    cursor: pointer;
+    background-color: rgb(27, 82, 235);
+  }
+
+.bottom {   
+    text-align: center; 
+    left: 43%;
+    position: absolute;
+    position: fixed;
+    bottom: 100px
+}
+
+.qrcode {
+    height: 140px;
+}
+
+.dqr1 {
+    margin-right: 8px;
+    letter-spacing:2px;
+}
+
+.dqr2 {
+    font-size: larger;
+    color: gray;
+}
+
+
+.down a {
+    float: left;
+    text-align:left;
+    margin-left: 80px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: gray;
+    margin-bottom: -3px;   
+}
+
+.final {
+    position: absolute;
+    position: fixed;
+    bottom: 6px
+}
