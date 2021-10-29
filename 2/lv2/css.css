@@ -1,0 +1,39 @@
+.Aeer {
+    height: 300px;
+    width: 200px;
+    background-color: #b0b0b0;
+    border-style: double;
+    margin: 100px auto
+}
+
+.A {
+    height: 260px;
+    width: 180px;
+    overflow: hidden;
+    margin:10px;
+    background-color: rgb(148, 148, 228);
+    box-shadow: 5px 5px 10px 4px rgb(142, 142, 184);
+    transition: 0.8s;
+    transform: translateY(0);
+}
+
+.A:hover {
+    transition: 0.4s;
+    transform: translateY(-60px);
+}
+
+.B {
+    text-align: center;
+    line-height: 36px;
+    height: 40px;
+    width: 140px;
+    background-color: hotpink;
+    margin: 20px;
+    transition: 0.8s;
+}
+
+.B:hover {
+    background-color: rgb(153, 64, 108);
+    transition: 0.8s;
+    cursor:pointer
+}

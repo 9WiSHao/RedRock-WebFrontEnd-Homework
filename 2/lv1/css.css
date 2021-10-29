@@ -1,0 +1,41 @@
+* {
+    background-color: gray;
+}
+
+@media screen and (max-width:699px) {
+    .D {
+        order: -1;
+    }
+}
+
+.G {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div div{
+    width: 130px;
+    background-color: lightpink;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.A {
+    height: 120px;
+}
+
+.B {
+    height: 100px;
+}
+
+.C {
+    height: 40px;
+}
+
+.D {
+    height: 200px;
+    background-color: lightseagreen;
+}
