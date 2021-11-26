@@ -17,7 +17,7 @@
 .chatHead1 {
     height: 80px;
     width: 80px;
-    padding: 0px 0px 10px 0px;
+    padding: 0px 8px 10px 0px;
 }
 .chatHead1 img {
     height: 80px; 
@@ -131,4 +131,10 @@
     width: 220px;
     height: 30px;
     outline: none;
+}
+/* 新加入的评论头图 */
+.img2 {
+    height: 80px; 
+    border-radius: 44px;
+    border: 2px solid #ec97b6
 }
