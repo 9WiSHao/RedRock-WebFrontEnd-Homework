@@ -17,7 +17,7 @@ none.onclick = () => {
 let inverse = document.getElementById('inverse');
 inverse.onclick = () => {
     for (let select of selects) {
-        select.checked = !select.checked
+        select.checked = !select.checked;
     }
 }
 
