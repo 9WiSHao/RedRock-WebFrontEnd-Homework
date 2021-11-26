@@ -1,0 +1,134 @@
+/* 主体大框 */
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 示例评论整体 */
+.comment1 {
+    width: 300px;
+}
+/* 示例评论上部（头像和头像右边） */
+.top1 {
+    display: flex;
+    justify-content: space-between
+}
+/* 头像 */
+.chatHead1 {
+    height: 80px;
+    width: 80px;
+    padding: 0px 0px 10px 0px;
+}
+.chatHead1 img {
+    height: 80px; 
+    border-radius: 44px;
+    border: 2px solid #ec97b6
+}
+/* 头像右边整体 */
+.right1 {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+}
+/* 头像右边的上面第一个 */
+.upA1 {
+    display: flex;
+    justify-content: space-between
+}
+/* 名字 */
+.name1 {
+    font-family: 黑体;
+    font-size: larger;
+    font-weight: bolder;
+}
+/* 那三个点 */
+.more1 {
+    font-size: 16px;
+    font-weight: 1000;
+    color: grey;
+}
+.more1:hover {
+    cursor: pointer;
+}
+/* 头像右边的上面第二个 */
+.upB1 {
+    display: flex;
+}
+/* 等级 */
+.lvA1 {
+    font-size: smaller;
+    color: #ec97b6;
+}
+.lvB1 {
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    background-color: #ffb400;
+    font-size: smaller;
+    border-radius: 10px;
+}
+/* 评论主体文字 */
+.commentText1 {
+    font-family: 黑体;
+}
+/* 示例评论下部 */
+.down1 {
+    display: flex;
+    justify-content: space-between
+}
+/* 示例评论下部时间楼层 */
+.time1 {
+    font-family: 黑体;
+    color: grey;
+    font-size: 14px;
+}
+/* 示例评论下部赞回复 */
+.like1 {
+    font-family: 黑体;
+    color: grey;
+    font-size: 14px;
+}
+/* 底部整体大框 */
+.bottom0 {
+    height: 44px; 
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: pink;
+}
+/* 底部居中框 */
+.bottom1 {
+    margin: 0 auto;
+    height: 44px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 底部发表按钮 */
+.inputButton {
+    height: 30px;
+    width: 64px;
+    border-radius: 14px;
+    border: none;
+    background-color: #ec97b6;
+    font-family: 黑体;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.3);
+}
+.inputButton:hover {
+    cursor: pointer;
+}
+.inputButton:active {
+    opacity: 0.6;
+}
+
+/* 底部输入框 */
+.inputText {
+    border: 0px;
+    width: 220px;
+    height: 30px;
+    outline: none;
+}
