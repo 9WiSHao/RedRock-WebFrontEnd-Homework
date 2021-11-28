@@ -9,7 +9,7 @@
 }
 
 input {
-  display: none; 
+  display: none;
 }
 
 input:checked + label {
@@ -32,14 +32,13 @@ label {
   width: 200px;
   height: 100px;
   border-radius: 100px;
-  background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0)),
-    #ddd;
+  background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(255, 255, 255, 0)), #ddd;
   box-shadow: 0 0.07em 0.1em -0.1em rgba(0, 0, 0, 0.4) inset,
     0 0.05em 0.08em -0.01em rgba(255, 255, 255, 0.7);
 }
 
 label::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 90px;
   height: 90px;
