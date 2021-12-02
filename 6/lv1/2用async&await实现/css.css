@@ -1,0 +1,44 @@
+span {
+  font-size: smaller;
+  color: gray;
+  font-style: italic;
+}
+/* 所有球共同的样式 */
+#ball {
+  height: 140px;
+  width: 140px;
+  border-radius: 100%;
+}
+/* 球动之前的样式 */
+.balla1 {
+  background-color: rgb(0, 255, 255);
+  margin-left: 0px;
+}
+
+.balla2 {
+  background-color: rgb(255, 140, 0);
+  margin-left: 0px;
+}
+
+.balla3 {
+  background-color: rgb(112, 128, 144);
+  margin-left: 0px;
+}
+/* 球动之后的样式 */
+.ballb1 {
+  transition: 2s;
+  margin-left: 600px;
+  background-color: rgb(0, 255, 255);
+}
+
+.ballb2 {
+  transition: 2s;
+  margin-left: 600px;
+  background-color: rgb(255, 140, 0);
+}
+
+.ballb3 {
+  transition: 2s;
+  margin-left: 600px;
+  background-color: rgb(112, 128, 144);
+}
