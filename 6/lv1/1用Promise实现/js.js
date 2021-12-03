@@ -6,7 +6,7 @@ const ball3 = document.querySelector('.balla3');
 // 点击按钮的功能
 start.addEventListener('click',() => {
  if (ball1.className == 'balla1'){
-    // 设置第一个球在0秒后排到异步任务队列中去动
+    // 设置第一个球在0秒后动
     let promise1 = new Promise((resolve, reject) => {
                         setTimeout(() => {
                                 ball1.className = 'ballb1'
