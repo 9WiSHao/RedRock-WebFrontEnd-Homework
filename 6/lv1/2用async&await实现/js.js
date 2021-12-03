@@ -7,11 +7,8 @@ const ball3 = document.querySelector('.balla3');
 async function awaitStart() {
    // 第一个球的动，立即开始
    let promise1 = new Promise((resolve, reject) => {
-      setTimeout(() => {
             ball1.className = 'ballb1'
             resolve('done!')
-         },0
-      )
    })
    // await到第一个球开始2s后再动
    // 因为设置的css过渡动画是2s，所以得等到第一个球运动结束之后再让它动，即等2000ms再说

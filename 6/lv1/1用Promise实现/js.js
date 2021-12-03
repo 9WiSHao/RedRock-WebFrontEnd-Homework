@@ -8,11 +8,8 @@ start.addEventListener('click',() => {
  if (ball1.className == 'balla1'){
     // 设置第一个球立即开始动
     let promise1 = new Promise((resolve, reject) => {
-                        setTimeout(() => {
                                 ball1.className = 'ballb1'
                                 resolve('done!')
-                            },0
-                        )
                     })
         // 第一个球开始之后，等2s第二个球再动
         // 因为设置的css过渡动画是2s，所以得等到第一个球运动结束之后再让它动，即等2000ms再说
