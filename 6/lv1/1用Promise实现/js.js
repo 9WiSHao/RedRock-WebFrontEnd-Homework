@@ -14,7 +14,7 @@ start.addEventListener('click',() => {
                             },0
                         )
                     })
-        // 2秒后第二个球继续
+        // 等2秒后第一个球到位了之后再第二个球继续
         promise1.then( 
             resolve => { let promise2 = new Promise((resolve, reject) => {
                                             setTimeout(() => {
@@ -24,7 +24,7 @@ start.addEventListener('click',() => {
                                             )
                                         })
             
-                // 再2秒后第三个球继续                            
+                // 等再过2秒后第二个球到位了之后再2秒后第三个球继续                            
                 promise2.then( 
                     resolve => {new Promise((resolve, reject) => {
                                                     setTimeout(() => {
