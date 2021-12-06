@@ -7,9 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div>123</div>
+
+    <input type="text" name="" id="text"><br>
+    <button id="putin">发送</button>
+    <p>fufu的回复：</p>
+    <div id="reply"></div>
+    
     <script>
+        const text = document.querySelector('#text');
+        const reply = document.querySelector('#reply');
+
+        let url = 'http://anonym.ink:8000/homework/fufubot_test/';
         
+        async function save() {
+            const data = new FormData();
+            data.append(`message`, `${text.value}`);
+            let result = await fetch(url, {
+                method:'POST',
+                body: data
+            })
+            let output = await result.text()
+            reply.innerHTML = output
+        }
+        
+        document.querySelector('#putin')['onclick']=x=>{
+            save();            
+        }
+               
     </script>
 </body>
 </html>
