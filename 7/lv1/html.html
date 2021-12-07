@@ -11,7 +11,8 @@
     <input type="text" name="" id="text"><br>
     <button id="putin">发送</button>
     <p>fufu的回复：</p>
-    <div id="reply"></div>
+    <div style="font-size: smaller;color: gray;font-style:italic;">信息来源以及更清楚的格式看控制台</div>
+    <div id="reply" style="background-color: burlywood;"></div>
     
     <script>
         const text = document.querySelector('#text');
@@ -29,7 +30,7 @@
             let output = await result.text()
             reply.innerHTML = output
         }
-        
+        // 按钮,按下执行这个异步函数
         document.querySelector('#putin')['onclick']=x=>{
             save();            
         }

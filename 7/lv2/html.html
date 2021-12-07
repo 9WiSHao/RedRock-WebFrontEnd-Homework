@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    user: <input type="text" id="user"><br>
+    password: <input type="text" id="password"><br>
+    <button id="putin1">提交</button>
+    <p>用户名使用 `admin`，密码使用 `root`的话，得到的信息为：</p>
+    <div style="font-size: smaller;color: gray;font-style:italic;">信息来源以及更清楚的格式看控制台</div>
+    <div class="retu" style="background-color: pink;"></div>
+    <button class="getNext">获取下一级题目</button>
+    <p>得到的下一级题目：</p>
+    <div style="font-size: smaller;color: gray;font-style:italic;">信息来源以及更清楚的格式看控制台</div>
+    <div id="next" style="background-color: burlywood;"></div>
+
+    <script>
+        
+        let url1 = 'http://anonym.ink:8000/homework/auth/login';
+        let url2 =  'http://anonym.ink:8000/homework/auth/next_level';
+
+        let user = document.querySelector('#user');
+        let password = document.querySelector('#password');
+        let retu = document.querySelector('.retu');
+
+        async function update(){
+            // 发送的对象，包含获取到的用户名和密码
+            let message = {
+                username: string = `${user.value}`,
+                password: string = `${password.value}`
+                    //根据题目要求，此处输入的话用户名使用 `admin`，密码使用 `root`
+            }
+            // 从第一个接口获取JWT   
+            let result1 = await fetch(url1,{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(message)
+            }) 
+            let token = await result1.text();
+            console.log(token);
+            retu.innerHTML = token;
+                // 得到的信息为：
+                // {"status":true,"data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTQ1MTQxOTgxMCIsIm5hbWUiOiLph47njaPlhYjovKkiLCJpYXQiOjExNDUxNDE5MTl9.rqxUm3Bajq5XcFsd0syJO9PWdc2JHFYqp9A1JboO8eo"}
+            // 利用LocalStorage把获取的JWT存在浏览器本地
+            if(typeof(localStorage.JWT) == "undefined") {
+                localStorage.setItem('JWT',token);
+            } else {
+                localStorage.removeItem('JWT');
+                localStorage.setItem('JWT',token);
+            }
+        }
+        // 按钮,按下执行获取JWT的异步函数
+        document.querySelector('#putin1')['onclick']=x=>{
+            update();
+        }
+
+        async function Next() {
+        // 从本地浏览器储存中获取JWT
+            let token = localStorage.getItem('JWT')
+        // 获取到的信息是字符串类型，不好获取；但又注意到这个字符串是标准的对象的格式，所以可以转为对象类型再直接提取data属性
+            let tokenToObj = JSON.parse(token)
+        // 获取data的属性，也就是JWT     
+            let token2 = tokenToObj.data
+        // 再从第二个接口获取下一个题目
+            let result2 = await fetch(url2,{
+                method: 'GET',
+                headers: {
+                    'Authorization': `BEARER ${token2}`
+                },
+            }) 
+            let got = await result2.text();
+            console.log(got);
+            next.innerHTML = got
+        }
+
+        document.querySelector('.getNext')['onclick']=x=>{
+            Next()
+        }
+// 获取到的信息
+// ## LV III
+
+// ### 题目
+
+// 现给定一接口 `ws://anonym.ink:8000/homework/chatroom?username=xxx`，可通过它与服务器建立 WebSocket 连接。其中参数 `username` 是你的进入聊天室时的用户名，为空则默认为 `Anonymous`. 
+
+// 当有人进入聊天室时，会收到以下格式内容：
+
+// ```javascript
+// {
+//     type: "OPEN",
+//     username: "李小钰",
+//     avatar: "https://avatars.githubusercontent.com/u/87082575?v=4"
+// }
+// ```
+
+// 当有人发送信息时，会收到以下格式内容：
+
+// ```javascript
+// {
+//     type: "MESSAGE",
+//     username: "马小仪",
+//     data: "前端的技术栈哪个我没学过？布鲁奈尔的钰姐，不知道比你们高到哪里去了，我和她谈笑风生。",
+//     avatar: "https://avatars.githubusercontent.com/u/72426675?v=4"
+// }
+// ```
+
+// 当有人退出聊天室时，会收到以下格式内容：
+
+// ```javascript
+// {
+//     type: "CLOSE",
+//     username: "曾小捷",
+//     avatar: "https://avatars.githubusercontent.com/u/72637162?v=4"
+// }
+// ```
+
+
+
+// - 要求：使用题目给定接口完成一个优(jiǎn)雅(lòu)的聊天室，并提交证明可以在不同的设备之间互相吹水的截图（比如试着和你的小伙伴们在里面一起吹水）；
+// - 扩展项：实现图片的发送与接收功能（使用绝对链接实现即可）。
+
+// ### NEXT LV
+
+// 无，但服务器每隔五分钟会向与服务器建立连接的客户端广播一次彩蛋。
+        
+    </script>
+</body>
+</html>
+
