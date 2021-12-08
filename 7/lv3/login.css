@@ -137,3 +137,9 @@ html::before {
 .right .inPutButton:active {
   background-image: linear-gradient(120deg, #ceb3e7 0%, #83b6e9 100%);
 }
+
+.about a {
+  color: grey;
+  font-size: smaller;
+  text-decoration: none;
+}
