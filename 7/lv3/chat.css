@@ -20,6 +20,10 @@
   font-size: xx-large;
 }
 
+.back:hover {
+  cursor: pointer;
+}
+
 .headName {
   font-size: larger;
   font-weight: bold;

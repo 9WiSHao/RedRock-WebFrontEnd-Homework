@@ -2,12 +2,15 @@ let socket = new WebSocket(`wss://anonym.ink:8000/homework/chatroom?username=${l
 let contentBox = document.querySelector(".body")
 let placeholder = document.querySelector('#placeholderBlock')
 
+document.querySelector('.back')['onclick']=x=>{
+    window.location.href = "login.html";
+}
 socket.onopen = function(e) {
     alert("已连接");
 };
   
 let yourMessage = document.querySelector('#yourMessage');
-
+// 输入评论
 document.querySelector('#go')['onclick']=x=>{
     socket.send(`${yourMessage.value}`)
 }
@@ -46,7 +49,7 @@ function onMessage(data) {
         // 在占位块之前插入元素
         contentBox.insertBefore(comment, placeholder)
     } else if (data.type == "OPEN") {
-        // 插入进入消息
+        // 插入登陆消息
         let open = document.createElement("div")
         open.className = 'open'
         open.innerHTML = `
