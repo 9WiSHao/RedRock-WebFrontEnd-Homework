@@ -70,6 +70,7 @@
 /* 评论主体文字 */
 .commentText1 {
   font-family: 黑体;
+  word-break: break-all;
 }
 /* 示例评论下部 */
 .down1 {
