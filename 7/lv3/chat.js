@@ -20,6 +20,7 @@ socket.onmessage = function(event) {
 
 function onMessage(data) {
     if (data.type == "MESSAGE") {
+        // 插入评论
         let comment = document.createElement("div")
         comment.className = "comment1"
         comment.innerHTML = `
@@ -44,8 +45,26 @@ function onMessage(data) {
         `
         // 在占位块之前插入元素
         contentBox.insertBefore(comment, placeholder)
-    } else {
-        // generateBubble(data.username, data.type == "OPEN")
+    } else if (data.type == "OPEN") {
+        // 插入进入消息
+        let open = document.createElement("div")
+        open.className = 'open'
+        open.innerHTML = `
+            <div class = 'inOpen'>${data.username}进入了聊天室<div/>
+            <hr />
+        `
+        // 在占位块之前插入元素
+        contentBox.insertBefore(open, placeholder)
+    } else if (data.type == "CLOSE") {
+        // 插入离开消息
+        let close = document.createElement("div")
+        close.className = 'close'
+        close.innerHTML = `
+            <div class = 'inClose'>${data.username}离开了聊天室<div/>
+            <hr />
+        `
+        // 在占位块之前插入元素
+        contentBox.insertBefore(comment, placeholder)
     }
 }
   
@@ -61,4 +80,4 @@ socket.onclose = function(event) {
   
 socket.onerror = function(error) {
     alert(`[error] ${error.message}`);
-};
+}

@@ -83,6 +83,7 @@
 /* 评论主体文字 */
 .commentText {
   font-family: 宋体;
+  width: 305px;
 }
 /* 示例评论下部 */
 .down {
@@ -145,4 +146,18 @@
   height: 80px;
   border-radius: 50%;
   border: 2px solid #ec97b6;
+}
+
+.open + .close {
+  height: 30px;
+  width: 400px;
+  background-color: rgb(94, 94, 94);
+  display: flex;
+  justify-content: center;
+}
+
+.inOpen + .inClose {
+  color: #000000;
+  font-size: smaller;
+  font-style: italic;
 }
