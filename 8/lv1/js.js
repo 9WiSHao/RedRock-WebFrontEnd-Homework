@@ -10,7 +10,7 @@ function hello(word1, word2) {
 
 //call的模拟实现
 Function.prototype.myCall = function(thisArg, ...arr){ //这里面不写形参，然后里面用arguments[i]来获取参数也行,就是表达...arr麻烦些，还得再整个数组收集起来
-    // 如果call的是空的，就指向windos
+    // 如果call的是空的，就指向windows
     if(thisArg === null || thisArg === undefined){
         thisArg = window;
     };
@@ -21,6 +21,7 @@ Function.prototype.myCall = function(thisArg, ...arr){ //这里面不写形参�
     // 调用函数并将结果返回，直接能将收集起来的后面的多的函数参数执行了
     let result = thisArg[fn](...arr);
     // 删除新增的属性
+    delete thisArg[fn];
     return result;   
 };
 // 验证下
@@ -36,6 +37,7 @@ Function.prototype.myApply = function(thisArg, arr){
     thisArg[fn] = this;
                             // 这儿注意收集的那一个类数组得展开
     let result = thisArg[fn](...arr);
+    delete thisArg[fn];
     return result;   
 };
 // 验证下
