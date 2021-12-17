@@ -1,0 +1,82 @@
+.all {
+  position: relative;
+  height: 160px;
+  width: 400px;
+  left: 30%;
+  top: 160px;
+}
+
+.main {
+  height: 100px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 0 8px gray;
+}
+
+.i {
+  height: 18px;
+  width: 18px;
+  margin: 8px;
+  border: 2px solid red;
+  border-radius: 50%;
+  text-align: center;
+  color: red;
+  font-weight: bolder;
+  font-size: large;
+  font-family: monospace;
+}
+
+.i:hover {
+  cursor: pointer;
+}
+
+.word {
+  color: red;
+}
+
+.others {
+  height: 26px;
+  width: 122px;
+  position: absolute;
+  left: 24%;
+  background-color: gray;
+  border-radius: 4px;
+  display: none;
+}
+
+.san {
+  position: absolute;
+  top: 24px;
+  left: 122px;
+  height: 0;
+  width: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid gray;
+  display: none;
+}
+
+.others2 {
+  height: 26px;
+  width: 122px;
+  position: absolute;
+  left: 24%;
+  background-color: gray;
+  border-radius: 4px;
+  display: block;
+}
+
+.san2 {
+  position: absolute;
+  top: 24px;
+  left: 122px;
+  height: 0;
+  width: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid gray;
+  display: block;
+}
