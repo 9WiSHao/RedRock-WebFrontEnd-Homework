@@ -29,8 +29,16 @@
   font-family: monospace;
 }
 
-.i:hover {
+.i-hover:hover {
   cursor: pointer;
+}
+
+.i-hover:hover .others {
+  display: block;
+}
+
+.i-hover:hover .san {
+  display: block;
 }
 
 .word {
@@ -42,6 +50,7 @@
   width: 122px;
   position: absolute;
   left: 24%;
+  top: -6px;
   background-color: gray;
   border-radius: 4px;
   display: none;
@@ -49,34 +58,12 @@
 
 .san {
   position: absolute;
-  top: 24px;
-  left: 122px;
+  top: 18px;
+  left: 124px;
   height: 0;
   width: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 12px solid gray;
   display: none;
-}
-
-.others2 {
-  height: 26px;
-  width: 122px;
-  position: absolute;
-  left: 24%;
-  background-color: gray;
-  border-radius: 4px;
-  display: block;
-}
-
-.san2 {
-  position: absolute;
-  top: 24px;
-  left: 122px;
-  height: 0;
-  width: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 12px solid gray;
-  display: block;
 }
